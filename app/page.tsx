@@ -75,7 +75,7 @@ export default function Portfolio() {
           </h2>
           <div className="space-y-4 max-w-3xl">
             <p className="text-lg">
-              I'm a passionate full-stack developer with 5+ years of experience building web applications. I specialize
+              I'm a passionate full-stack developer with HOLAAAAAAAAAAAAAA of experience building web applications. I specialize
               in React, Next.js, and Node.js, creating responsive and user-friendly interfaces.
             </p>
             <p className="text-lg">
