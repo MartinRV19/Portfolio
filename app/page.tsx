@@ -10,7 +10,7 @@ export default function Portfolio() {
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
-          <div className="font-bold text-xl">Martin Valiente</div>
+          <div className="font-bold text-xl">Martin Rodriguez Valiente</div>
           <nav className="hidden md:flex gap-6">
             <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
               About
@@ -48,16 +48,16 @@ export default function Portfolio() {
         <section className="py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1 space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Hi, I'm <span className="text-primary">John Doe</span>
+              Hola, soy <span className="text-primary">Martin</span>
             </h1>
-            <h2 className="text-2xl md:text-3xl text-muted-foreground">Full Stack Developer</h2>
+            <h2 className="text-2xl md:text-3xl text-muted-foreground">Genio Mundial</h2>
             <p className="text-lg text-muted-foreground max-w-md">
-              I build exceptional and accessible digital experiences for the web.
+              Me gusta trabajar con datos y acá hay algunos de los proyectos que más me gustaron.
             </p>
             <div className="flex gap-4 pt-4">
               <Button variant="outline" asChild>
                 <Link href="/resume.pdf" target="_blank">
-                  View Resume
+                  CV
                 </Link>
               </Button>
             </div>
@@ -93,7 +93,7 @@ export default function Portfolio() {
         <section id="projects" className="py-12 md:py-20 scroll-mt-20">
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
             <span className="w-8 h-1 bg-primary rounded-full"></span>
-            Featured Projects
+            Proyectos
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProjectCard
