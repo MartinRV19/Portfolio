@@ -1,92 +1,58 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import IpynbRenderer from "react-ipynb-renderer"
-import "react-ipynb-renderer/dist/styles/default.css"
+import { useState, useEffect, useRef } from "react"
 
 interface NotebookViewerProps {
-  notebookPath: string
-  fallbackData?: any
+  notebookPath: string;
 }
 
-export default function NotebookViewer({ notebookPath, fallbackData }: NotebookViewerProps) {
-  const [notebookData, setNotebookData] = useState<any>(fallbackData || null)
-  const [loading, setLoading] = useState(!fallbackData)
-  const [error, setError] = useState<string | null>(null)
+const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
+  const [htmlContent, setHtmlContent] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
-    async function fetchNotebook() {
-      if (fallbackData) {
-        setNotebookData(fallbackData)
-        setLoading(false)
-        return
-      }
-
+    const fetchHtmlContent = async () => {
       try {
         setLoading(true)
-        const response = await fetch(notebookPath)
-
+        const response = await fetch(notebookPath);
         if (!response.ok) {
-          throw new Error(`Failed to fetch notebook: ${response.status}`)
+          throw new Error(`Failed to fetch HTML: ${response.status}`);
         }
-
-        const text = await response.text()
-        try {
-          const data = JSON.parse(text)
-          setNotebookData(data)
-          setError(null)
-        } catch (parseErr) {
-          console.error("Error parsing notebook JSON:", parseErr)
-          setError("Invalid notebook format")
-          // Use fallback data if available
-          if (fallbackData) {
-            setNotebookData(fallbackData)
-          }
-        }
-      } catch (err: any) {
-        console.error("Error loading notebook:", err)
-        setError(err.message || "Failed to load notebook")
-        // Use fallback data if available
-        if (fallbackData) {
-          setNotebookData(fallbackData)
-        }
+        const html = await response.text();
+        setHtmlContent(html);
+        setError(null);
+      } catch (err) {
+        setError("Failed to load HTML content.");
+        console.error(err);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-
-    fetchNotebook()
-  }, [notebookPath, fallbackData])
+    };
+    fetchHtmlContent();
+  }, [notebookPath]);
 
   if (loading) {
     return (
       <div className="p-8 text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
-        <p className="mt-4">Loading notebook...</p>
+        <p className="mt-4">Loading...</p>
       </div>
-    )
+    );
   }
 
-  if (error && !notebookData) {
+  if (error) {
     return (
       <div className="p-8 text-center">
         <p className="text-destructive">Error: {error}</p>
-        <p className="mt-2">Unable to load the notebook file.</p>
       </div>
-    )
-  }
-
-  if (!notebookData) {
-    return (
-      <div className="p-8 text-center">
-        <p>No notebook data available.</p>
-      </div>
-    )
+    );
   }
 
   return (
-    <div className="notebook-wrapper p-4">
-      <IpynbRenderer ipynb={notebookData} syntaxTheme="prism" language="python" bgStyle="light" />
-    </div>
-  )
-}
+    <iframe ref={iframeRef} srcDoc={htmlContent || ""} width="100%" height="800px" style={{ border: "none" }} title="Notebook"></iframe>
+  );
+};
+
+export default NotebookViewer;

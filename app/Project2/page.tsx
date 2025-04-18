@@ -4,12 +4,10 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import dynamic from "next/dynamic"
+import { Card } from "@/components/ui/card";
+import NotebookViewer from "@/components/notebook-viewer";
 
-// Dynamically import the HTML renderer with no SSR
-const HtmlRenderer = dynamic(() => import("@/components/html-renderer"), { ssr: false })
-
+// No need for useState and useEffect as NotebookViewer handles loading
 export default function Project2Page() {
   const [isClient, setIsClient] = useState(false)
 
@@ -40,12 +38,7 @@ export default function Project2Page() {
         <Card className="p-4 md:p-6">
           <h2 className="text-2xl font-bold mb-4">Project Notebook</h2>
           <div className="bg-card border rounded-lg overflow-hidden">
-            {isClient && (
-              <HtmlRenderer
-                filePath="/notebooks/venta_departamentos_properati-aUmoPwcZcDrI4sqYyZKCEn2WXMxNJ6.html"
-                height={800}
-              />
-            )}
+            <NotebookViewer notebookPath="/notebooks/venta_departamentos_properati-aUmoPwcZcDrI4sqYyZKCEn2WXMxNJ6.html" />
           </div>
         </Card>
       </div>
