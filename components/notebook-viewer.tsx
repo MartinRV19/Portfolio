@@ -58,6 +58,12 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
     );
   }
 
+  const modifiedHtmlContent = htmlContent
+    ? htmlContent.replace(
+        "</head>",
+        "<style>.sidebar { display: none; }</style></head>"
+      )
+    : "";
   return (
     <iframe
       ref={iframeRef}
@@ -71,7 +77,7 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
         position: "relative",
         zIndex: 1,
       }}
-      title="Notebook"
+      title="Notebook"      srcDoc={modifiedHtmlContent}
     ></iframe>
   );
 };
