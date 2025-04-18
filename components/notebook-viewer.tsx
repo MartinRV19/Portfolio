@@ -65,7 +65,6 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
       width="100%"
       height="800px"
       style={{
-        border: "none",
         width: "100%",
         height: "100%",
         overflow: "visible",
