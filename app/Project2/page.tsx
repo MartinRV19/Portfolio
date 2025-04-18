@@ -1,11 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card";
-import NotebookViewer from "@/components/notebook-viewer";
 
 // No need for useState and useEffect as NotebookViewer handles loading
 export default function Project2Page() {
@@ -25,23 +22,16 @@ export default function Project2Page() {
           </Link>
         </Button>
       </div>
-
       <div className="grid gap-8">
         <div>
-          <h1 className="text-4xl font-bold mb-4">Task Management Analytics</h1>
+          <h1 className="text-4xl font-bold mb-4">Apartment Sales Analysis in Buenos Aires</h1>
           <p className="text-lg text-muted-foreground mb-6">
-            A task management application with user engagement analytics. This project provides insights into user
-            productivity and task completion rates.
+            Analysis of apartment sales data in different neighborhoods of Buenos Aires, Argentina. The analysis
+            includes visualizations of price distributions, price per square meter, and a choropleth map.
           </p>
         </div>
-
-        <Card className="p-4 md:p-6">
-          <h2 className="text-2xl font-bold mb-4">Project Notebook</h2>
-          <div className="bg-card border rounded-lg overflow-hidden">
-            <NotebookViewer notebookPath="/notebooks/venta_departamentos_properati-aUmoPwcZcDrI4sqYyZKCEn2WXMxNJ6.html" />
-          </div>
-        </Card>
       </div>
+      <div dangerouslySetInnerHTML={{ __html: notebookContent }} />
     </div>
   )
 }
