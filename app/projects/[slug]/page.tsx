@@ -6,7 +6,6 @@ import Link from "next/link"
 import { ArrowLeft, Github, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
 import { projectsData } from "@/data/projects"
 import { getFallbackNotebook } from "@/data/fallback-notebooks"
 import dynamic from "next/dynamic"
@@ -88,12 +87,8 @@ export default function ProjectPage() {
           />
         </div>
 
-        <Card className="p-4 md:p-6">
-          <h2 className="text-2xl font-bold mb-4">Project Notebook</h2>
-          <div className="notebook-container bg-card border rounded-lg overflow-hidden">
-            <NotebookViewer notebookPath={project.notebookPath} fallbackData={fallbackNotebook} />
-          </div>
-        </Card>
+        <h2 className="text-2xl font-bold mb-4">Project Notebook</h2>
+        <NotebookViewer notebookPath={project.notebookPath} fallbackData={fallbackNotebook} />
       </div>
     </div>
   )
