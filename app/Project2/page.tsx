@@ -2,9 +2,10 @@
 
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import NotebookViewer from "@/components/notebook-viewer";
 
-export default function Project2Page() {
+const Project2Page = () => {
   return (
     <div className="container py-8 md:py-12">
       <div className="mb-8">
@@ -24,7 +25,9 @@ export default function Project2Page() {
           </p>
         </div>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: notebookContent }} />
+      <NotebookViewer notebookPath="/notebooks/venta_departamentos_properati.html" />
     </div>
-  )
-}
+  );
+};
+
+export default Project2Page;
