@@ -64,16 +64,9 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
         "<style>.sidebar { display: none; }</style></head>"
       )
     : "";
-  return (
-    <iframe ref={iframeRef} srcDoc={modifiedHtmlContent} width="100%" height="800px" style={{
-      border: "none",
-      width: "100%",
-      height: "100%",
-      overflow: "visible",
-      position: "relative",
-      zIndex: 1,
-    }} title="Notebook"></iframe>
-  );
+    return (
+      <iframe ref={iframeRef} srcDoc={modifiedHtmlContent} style={{ border: "none", width: "100%", height: "800px" }} title="Notebook" />
+    );
 };
 
 export default NotebookViewer;
