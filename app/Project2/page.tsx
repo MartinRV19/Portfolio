@@ -4,14 +4,7 @@ import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-// No need for useState and useEffect as NotebookViewer handles loading
 export default function Project2Page() {
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-
   return (
     <div className="container py-8 md:py-12">
       <div className="mb-8">
