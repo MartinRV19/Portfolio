@@ -10,7 +10,6 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
   const [htmlContent, setHtmlContent] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     const fetchHtmlContent = async () => {
@@ -58,11 +57,11 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
     );
   }
 
-  const modifiedHtmlContent = htmlContent
-    ? htmlContent.replace("</body>", `<script>const style = document.createElement('style'); style.innerHTML = '.sidebar { display: none; }'; document.head.appendChild(style);</script>`)
-    : "";
-
-  return <div className="notebook-content" style={{ width: "100%" }} dangerouslySetInnerHTML={{ __html: modifiedHtmlContent }} />;
+  return (
+    <div className="notebook-content" style={{ width: "100%", overflow: "hidden" }}>
+      <div dangerouslySetInnerHTML={{ __html: htmlContent || "" }} />
+    </div>
+  );
 };
 
 export default NotebookViewer;
