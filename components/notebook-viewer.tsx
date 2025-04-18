@@ -64,7 +64,14 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
       srcDoc={htmlContent || ""}
       width="100%"
       height="800px"
-      style={{ border: "none" }}
+      style={{
+        border: "none",
+        width: "100%",
+        height: "100%",
+        overflow: "visible",
+        position: "relative",
+        zIndex: 1,
+      }}
       title="Notebook"
     ></iframe>
   );
