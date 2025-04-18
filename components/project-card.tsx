@@ -11,9 +11,18 @@ interface ProjectCardProps {
   imageUrl: string
   demoUrl: string
   repoUrl: string
+  projectNumber: number
 }
 
-export default function ProjectCard({ title, description, tags, imageUrl, demoUrl, repoUrl }: ProjectCardProps) {
+export default function ProjectCard({
+  title,
+  description,
+  tags,
+  imageUrl,
+  demoUrl,
+  repoUrl,
+  projectNumber,
+}: ProjectCardProps) {
   return (
     <Card className="overflow-hidden flex flex-col h-full border bg-card text-card-foreground">
       <div className="aspect-video w-full overflow-hidden">
@@ -44,7 +53,7 @@ export default function ProjectCard({ title, description, tags, imageUrl, demoUr
           </Link>
         </Button>
         <Button size="sm" asChild>
-          <Link href={demoUrl} target="_blank" rel="noopener noreferrer">
+          <Link href={`/Project${projectNumber}`}>
             <ExternalLink className="mr-2 h-4 w-4" />
             Demo
           </Link>

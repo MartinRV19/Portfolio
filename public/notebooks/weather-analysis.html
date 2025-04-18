@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Weather Data Analysis</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1, h2, h3 {
+      color: #2563eb;
+    }
+    
+    .cell {
+      margin-bottom: 20px;
+      border-left: 3px solid #e5e7eb;
+      padding-left: 15px;
+    }
+    
+    .code-cell {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    
+    pre {
+      margin: 0;
+    }
+    
+    code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 15px 0;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .chart {
+      width: 100%;
+      height: 300px;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .bar {
+      width: 60px;
+      background-color: #3b82f6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+    
+    .bar-label {
+      margin-top: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Weather Data Analysis</h1>
+  
+  <p>This notebook analyzes weather data from our weather dashboard application.</p>
+  
+  <div class="cell code-cell">
+    <pre><code>import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set the style for our plots
+sns.set(style="whitegrid")</code></pre>
+  </div>
+  
+  <h2>Loading the Dataset</h2>
+  
+  <p>First, we'll load our weather data.</p>
+  
+  <div class="cell code-cell">
+    <pre><code># Sample data (in a real notebook, we would load from a file)
+data = {
+    'Date': ['2023-01-01', '2023-01-02', '2023-01-03'],
+    'City': ['New York', 'Los Angeles', 'Chicago'],
+    'Temperature': [32, 75, 28],
+    'Humidity': [65, 45, 70],
+    'Precipitation': [0.1, 0.0, 0.3]
+}
+
+df = pd.DataFrame(data)
+df</code></pre>
+  </div>
+  
+  <div class="cell">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Date</th>
+          <th>City</th>
+          <th>Temperature</th>
+          <th>Humidity</th>
+          <th>Precipitation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>2023-01-01</td>
+          <td>New York</td>
+          <td>32</td>
+          <td>65</td>
+          <td>0.1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2023-01-02</td>
+          <td>Los Angeles</td>
+          <td>75</td>
+          <td>45</td>
+          <td>0.0</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2023-01-03</td>
+          <td>Chicago</td>
+          <td>28</td>
+          <td>70</td>
+          <td>0.3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <h2>Temperature Analysis</h2>
+  
+  <p>Let's analyze the temperature differences between cities.</p>
+  
+  <div class="cell code-cell">
+    <pre><code># Group by city and calculate average temperature
+city_temps = df.groupby('City')['Temperature'].mean()
+city_temps</code></pre>
+  </div>
+  
+  <div class="cell">
+    <pre><code>City
+Chicago         28.0
+Los Angeles     75.0
+New York        32.0
+Name: Temperature, dtype: float64</code></pre>
+  </div>
+  
+  <div class="cell">
+    <div class="chart">
+      <div class="bar" style="height: 28%;">
+        <span>28°F</span>
+        <span class="bar-label">Chicago</span>
+      </div>
+      <div class="bar" style="height: 75%;">
+        <span>75°F</span>
+        <span class="bar-label">Los Angeles</span>
+      </div>
+      <div class="bar" style="height: 32%;">
+        <span>32°F</span>
+        <span class="bar-label">New York</span>
+      </div>
+    </div>
+  </div>
+  
+  <h2>Conclusion</h2>
+  
+  <p>Based on our analysis, Los Angeles has the highest temperature at 75°F, while Chicago has the lowest at 28°F. New York falls in between at 32°F. This data can help users plan their travel or activities based on weather conditions in different cities.</p>
+  
+</body>
+</html>
