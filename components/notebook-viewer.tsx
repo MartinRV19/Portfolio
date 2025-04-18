@@ -59,14 +59,12 @@ const NotebookViewer: React.FC<NotebookViewerProps> = ({ notebookPath }) => {
   }
 
   const modifiedHtmlContent = htmlContent
-    ? htmlContent.replace(
-        "</head>",
-        "<style>.sidebar { display: none; }</style></head>"
-      )
+    ? htmlContent.replace("</body>", `<script>const style = document.createElement('style'); style.innerHTML = '.sidebar { display: none; }'; document.head.appendChild(style);</script></body>`)
     : "";
-    return (
-      <iframe ref={iframeRef} srcDoc={modifiedHtmlContent} style={{ border: "none", width: "100%", height: "800px" }} title="Notebook" />
-    );
+
+  return (
+    <iframe ref={iframeRef} srcDoc={modifiedHtmlContent} style={{ border: "none", width: "100%", height: "800px" }} title="Notebook" />
+  );
 };
 
 export default NotebookViewer;
