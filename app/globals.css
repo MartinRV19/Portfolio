@@ -10,13 +10,16 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Ensure HTML content fills container */
+  .html-renderer-container iframe {
+    width: 100%;
+    min-height: 100vh;
+    border: none;
+}
 
-  /* Add this new rule */
-  .html-renderer-container iframe,
-  .html-renderer-container .rendered-html {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
+
+
 }
 
 @layer base {
