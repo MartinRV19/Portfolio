@@ -6,6 +6,7 @@ format:
     toc: true      # Agrega la tabla de contenidos
     toc-title: "Contenido" # Cambia el título de tabla de contenidos
     theme: cosmo
+    embed-resources: true
 
 jupyter: python3
 ---
