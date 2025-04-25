@@ -8,10 +8,13 @@ const HtmlRenderer = dynamic(
 );
 
 export default function Project4Page() { 
-  return (
-    <HtmlRenderer
-      filePath="/notebooks/wordcloud_Spanish.html"
-      className="w-full"
-    />
-  );
+    return (
+        <div className="h-full">
+            <HtmlRenderer
+                filePath="/notebooks/wordcloud_Spanish.html"
+                className="w-full"
+                height="100vh"
+            />
+        </div>
+    );
 }
