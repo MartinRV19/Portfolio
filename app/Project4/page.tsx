@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 
-// Dynamically import the HTML renderer with no SSR
 const HtmlRenderer = dynamic(
   () => import("@/components/html-renderer"),
   { ssr: false }
@@ -10,12 +9,11 @@ const HtmlRenderer = dynamic(
 
 export default function Project4Page() {
   return (
-    <div className="container py-8 md:py-12">
-      <div className="grid gap-8">
-        <div className="bg-card border rounded-lg overflow-hidden">
-          <HtmlRenderer filePath="/notebooks/wordcloud_Spanish.html" height={800} />
-        </div>
-      </div>
+    <div className="flex flex-1 w-full h-[calc(100vh-8rem)] overflow-auto"> {/* Scrollable container */}
+      <HtmlRenderer 
+        filePath="/notebooks/wordcloud_Spanish.html" 
+        className="w-full h-full min-h-[calc(100vh-8rem)]" // Ensures content fills space
+      />
     </div>
   );
 }
