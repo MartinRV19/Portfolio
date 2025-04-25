@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 import ProjectCard from "@/components/project-card"
 import { ThemeToggle } from "@/components/theme-toggle"
 export default function Portfolio() {
-  return (
+  return ( 
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between ">
           <div className="font-bold text-xl">John Doe</div>
           <nav className="hidden md:flex gap-6">
             <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -41,7 +41,7 @@ export default function Portfolio() {
         </div>
       </header>
 
-      <main className="container py-8 md:py-12">
+      <main className="container main-content pt-12">
         {/* Hero Section */}
         <section className="py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1 space-y-4">
@@ -171,3 +171,4 @@ export default function Portfolio() {
     </div>
   )
 }
+

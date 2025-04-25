@@ -41,7 +41,7 @@ export default function ProjectPage() {
   }
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="py-8 md:py-12">
       <div className="mb-8">
         <Button variant="ghost" asChild>
           <Link href="/#projects">
