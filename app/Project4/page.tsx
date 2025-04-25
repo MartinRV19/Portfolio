@@ -1,10 +1,21 @@
-const Project4 = () => {
+"use client";
+
+import dynamic from "next/dynamic";
+
+// Dynamically import the HTML renderer with no SSR
+const HtmlRenderer = dynamic(
+  () => import("@/components/html-renderer"),
+  { ssr: false }
+);
+
+export default function Project4Page() {
   return (
-    <div>
-      <h1>Project 4</h1>
-      <p>This is the fourth project.</p>
+    <div className="container py-8 md:py-12">
+      <div className="grid gap-8">
+        <div className="bg-card border rounded-lg overflow-hidden">
+          <HtmlRenderer filePath="/notebooks/wordcloud_Spanish.html" height={800} />
+        </div>
+      </div>
     </div>
   );
-};
-
-export default Project4;
+}
