@@ -1,12 +1,13 @@
-import type React from "react"
-import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail } from "lucide-react"
-import Link from "next/link"
+tsx
+import type React from "react";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function ProjectLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <div className="min-h-screen bg-background">
@@ -17,22 +18,36 @@ export default function ProjectLayout({
             <Link href="/">John Doe</Link>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="/#about" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="/#about"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               About
             </Link>
-            <Link href="/#projects" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              href="/#projects"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Projects
             </Link>
           </nav>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
@@ -66,5 +81,5 @@ export default function ProjectLayout({
         </div>
       </footer>
     </div>
-  )
+  );
 }

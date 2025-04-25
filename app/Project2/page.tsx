@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 // Dynamically import the HTML renderer with no SSR
 const HtmlRenderer = dynamic(() => import("@/components/html-renderer"), { ssr: false })
 
-export default function Project2Page() {
+export default function Project4Page() {
   return (
     <div className="container py-8 md:py-12">
       <div className="grid gap-8">
