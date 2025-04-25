@@ -62,23 +62,6 @@ export default function ProjectLayout({
       </header>
 
       {children}
-
-      {/* Footer */}
-      <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} John Doe. All rights reserved.
-          </div>
-          <div className="flex gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/#about">About</Link>
-            </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/#projects">Projects</Link>
-            </Button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
