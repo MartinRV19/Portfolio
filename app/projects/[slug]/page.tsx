@@ -1,8 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "next/navigation"
-import Link from "next/link"
 import { ArrowLeft, Github, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -30,11 +29,11 @@ export default function ProjectPage() {
     return (
       <div className="container py-20 text-center">
         <h1 className="text-3xl font-bold mb-4">Project not found</h1>
-        <Button asChild>
-          <Link href="/#projects">
+        <Button asChild >
+          <a href="/#projects" >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Projects
-          </Link>
+          </a>
         </Button>
       </div>
     )
@@ -44,11 +43,11 @@ export default function ProjectPage() {
     <div className="py-8 md:py-12">
       <div className="mb-8">
         <Button variant="ghost" asChild>
-          <Link href="/#projects">
+          <a href="/#projects" >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Projects
-          </Link>
-        </Button>
+          </a>
+        </Button> 
       </div>
 
       <div className="grid gap-8">
@@ -65,10 +64,10 @@ export default function ProjectPage() {
 
           <div className="flex gap-4 mb-8">
             <Button asChild>
-              <Link href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+              <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" >
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Live Demo
-              </Link>
+              </a>
             </Button>
             <Button variant="outline" asChild>
               <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
