@@ -1,4 +1,3 @@
-tsx
 import type React from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
