@@ -53,7 +53,7 @@ export default function HtmlRenderer({ filePath, className = "", height = 600 }:
   }, [filePath])
 
   return (
-    <div className={`notebook-container relative ${className}`}>
+    <div className={`notebook-container relative overflow-hidden ${className}`}>
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-10">
           <div className="flex flex-col items-center">
@@ -74,8 +74,12 @@ export default function HtmlRenderer({ filePath, className = "", height = 600 }:
 
       <iframe
         ref={iframeRef}
-        className="w-full border-0"
-        style={{ height: typeof height === "number" ? `${height}px` : height }}
+        className="w-full border-0 overflow-auto"
+        style={{ 
+          height: typeof height === "number" ? `${height}px` : height,
+          overflowY: 'auto',
+          overflowX: 'hidden'
+        }}
         title="Notebook Content"
         sandbox="allow-same-origin allow-scripts"
       />
