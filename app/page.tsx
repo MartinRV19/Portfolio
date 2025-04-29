@@ -2,7 +2,6 @@ import { Github, Mail, Linkedin } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import ProjectCard from "@/components/project-card"
-import { ThemeToggle } from "@/components/theme-toggle"
 export default function Portfolio() {
   // Lista de proyectos con fechas
   const projects = [
@@ -95,7 +94,6 @@ export default function Portfolio() {
             </Link>
           </nav>
           <div className="flex items-center gap-2">
-            <ThemeToggle />
             <Button variant="ghost" size="icon" asChild>
               <Link href="https://github.com/MartinRV19" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
