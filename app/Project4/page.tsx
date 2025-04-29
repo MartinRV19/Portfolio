@@ -19,7 +19,6 @@ export default function Project4Page() {
                 filePath="/notebooks/wordcloud_Spanish.html"
                 className="w-full"
                 height="100vh"
-                style={{ overflow: 'hidden' }}  // Disable internal scroll
             />
         </div>
     );

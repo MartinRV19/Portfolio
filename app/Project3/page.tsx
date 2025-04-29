@@ -1,18 +1,25 @@
-"use client"
+"use client";
 
-import dynamic from "next/dynamic"
+import dynamic from "next/dynamic";
+import { useEffect } from "react";
 
-// Dynamically import the HTML renderer with no SSR
-const HtmlRenderer = dynamic(() => import("@/components/html-renderer"), { ssr: false })
+const HtmlRenderer = dynamic(
+  () => import("@/components/html-renderer"),
+  { ssr: false }
+);
 
-export default function Project3Page() {
-  return (
-    <div className="container py-8 md:py-12">
-      <div className="grid gap-8">
-        <div className="bg-card border rounded-lg overflow-hidden">
-          <HtmlRenderer filePath="/notebooks/task-analytics.html" height={800} />
+export default function Project3Page() { 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (
+        <div className="h-full overflow-hidden">
+            <HtmlRenderer
+                filePath="/notebooks/wordcloud_Spanish.html"
+                className="w-full"
+                height="100vh"
+            />
         </div>
-      </div>
-    </div>
-  )
+    );
 }
