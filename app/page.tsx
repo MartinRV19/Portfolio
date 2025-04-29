@@ -64,7 +64,7 @@ export default function Portfolio() {
       title: "Task Management App",
       description: "A collaborative task manager with real-time updates, file sharing, and team communication features.",
       date: "Febrero 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
+      imageUrl: "/wordcloud.png?height=200&width=300",
       demoUrl: "/Project2",
       repoUrl: "https://github.com",
       projectNumber: 2,
