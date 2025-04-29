@@ -33,7 +33,11 @@ export default function ProjectCard({
         />
       </div>
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle>
+          <Link href={`/Project${projectNumber}`} className="hover:underline">
+            {title}
+          </Link>
+        </CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
