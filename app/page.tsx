@@ -4,6 +4,82 @@ import { Button } from "@/components/ui/button"
 import ProjectCard from "@/components/project-card"
 import { ThemeToggle } from "@/components/theme-toggle"
 export default function Portfolio() {
+  // Lista de proyectos con fechas
+  const projects = [
+    {
+      title: "Real Estate Insights",
+      description: "Visualization and analysis of real estate data for better decision making.",
+      date: "Agosto 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project8",
+      repoUrl: "https://github.com",
+      projectNumber: 8,
+    },
+    {
+      title: "Weather Analysis",
+      description: "A dashboard for analyzing weather data and visualizing trends over time.",
+      date: "Julio 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project7",
+      repoUrl: "https://github.com",
+      projectNumber: 7,
+    },
+    {
+      title: "Fitness Tracker",
+      description: "A mobile-responsive web app for tracking workouts, nutrition, and fitness goals with data visualization.",
+      date: "Junio 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project6",
+      repoUrl: "https://github.com",
+      projectNumber: 6,
+    },
+    {
+      title: "Recipe Finder",
+      description: "An application that helps users discover recipes based on available ingredients and dietary preferences.",
+      date: "Mayo 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project5",
+      repoUrl: "https://github.com",
+      projectNumber: 5,
+    },
+    {
+      title: "Portfolio Website",
+      description: "A responsive portfolio website built with modern web technologies to showcase projects and skills.",
+      date: "Abril 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project4",
+      repoUrl: "https://github.com",
+      projectNumber: 4,
+    },
+    {
+      title: "Weather Dashboard",
+      description: "A weather application that provides forecasts, historical data, and location-based weather alerts.",
+      date: "Marzo 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project3",
+      repoUrl: "https://github.com",
+      projectNumber: 3,
+    },
+    {
+      title: "Task Management App",
+      description: "A collaborative task manager with real-time updates, file sharing, and team communication features.",
+      date: "Febrero 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project2",
+      repoUrl: "https://github.com",
+      projectNumber: 2,
+    },
+    {
+      title: "E-commerce Platform",
+      description: "A full-featured online store with payment processing, user authentication, and inventory management.",
+      date: "Enero 2024",
+      imageUrl: "/placeholder.svg?height=200&width=300",
+      demoUrl: "/Project1",
+      repoUrl: "https://github.com",
+      projectNumber: 1,
+    },
+  ];
+
   return ( 
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -94,78 +170,18 @@ export default function Portfolio() {
             Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ProjectCard
-              title="E-commerce Platform"
-              description="A full-featured online store with payment processing, user authentication, and inventory management."
-              tags={["React", "Node.js", "MongoDB", "Stripe"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project1"
-              repoUrl="https://github.com"
-              projectNumber={1}
-            />
-            <ProjectCard
-              title="Task Management App"
-              description="A collaborative task manager with real-time updates, file sharing, and team communication features."
-              tags={["Next.js", "TypeScript", "Firebase", "Tailwind"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project2"
-              repoUrl="https://github.com"
-              projectNumber={2}
-            />
-            <ProjectCard
-              title="Weather Dashboard"
-              description="A weather application that provides forecasts, historical data, and location-based weather alerts."
-              tags={["React", "Redux", "Weather API", "Chart.js"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project3"
-              repoUrl="https://github.com"
-              projectNumber={3}
-            />
-            <ProjectCard
-              title="Portfolio Website"
-              description="A responsive portfolio website built with modern web technologies to showcase projects and skills."
-              tags={["Next.js", "Tailwind CSS", "Framer Motion"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project4"
-              repoUrl="https://github.com"
-              projectNumber={4}
-            />
-            <ProjectCard
-              title="Recipe Finder"
-              description="An application that helps users discover recipes based on available ingredients and dietary preferences."
-              tags={["React", "Node.js", "MongoDB", "Food API"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project5"
-              repoUrl="https://github.com"
-              projectNumber={5}
-            />
-            <ProjectCard
-              title="Fitness Tracker"
-              description="A mobile-responsive web app for tracking workouts, nutrition, and fitness goals with data visualization."
-              tags={["React", "TypeScript", "Firebase", "D3.js"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project6"
-              repoUrl="https://github.com"
-              projectNumber={6}
-            />
-            <ProjectCard
-              title="Weather Analysis"
-              description="A dashboard for analyzing weather data and visualizing trends over time."
-              tags={["React", "Chart.js", "Weather API"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project7"
-              repoUrl="https://github.com"
-              projectNumber={7}
-            />
-            <ProjectCard
-              title="Real Estate Insights"
-              description="Visualization and analysis of real estate data for better decision making."
-              tags={["Next.js", "D3.js", "Data Science"]}
-              imageUrl="/placeholder.svg?height=200&width=300"
-              demoUrl="/Project8"
-              repoUrl="https://github.com"
-              projectNumber={8}
-            />
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.projectNumber}
+                title={project.title}
+                description={project.description}
+                date={project.date}
+                imageUrl={project.imageUrl}
+                demoUrl={project.demoUrl}
+                repoUrl={project.repoUrl}
+                projectNumber={project.projectNumber}
+              />
+            ))}
           </div>
         </section>
       </main>

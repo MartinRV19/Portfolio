@@ -7,7 +7,7 @@ import Link from "next/link"
 interface ProjectCardProps {
   title: string
   description: string
-  tags: string[]
+  date: string
   imageUrl: string
   demoUrl: string
   repoUrl: string
@@ -17,7 +17,7 @@ interface ProjectCardProps {
 export default function ProjectCard({
   title,
   description,
-  tags,
+  date,
   imageUrl,
   demoUrl,
   repoUrl,
@@ -37,12 +37,8 @@ export default function ProjectCard({
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <div className="flex flex-wrap gap-2">
-          {tags.map((tag, index) => (
-            <Badge key={index} variant="secondary">
-              {tag}
-            </Badge>
-          ))}
+        <div className="text-sm text-muted-foreground font-semibold">
+          {date}
         </div>
       </CardContent>
       <CardFooter className="flex justify-between">
