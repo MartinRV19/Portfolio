@@ -73,7 +73,7 @@ export default function Portfolio() {
       title: "E-commerce Platform",
       description: "A full-featured online store with payment processing, user authentication, and inventory management.",
       date: "Enero 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
+      imageUrl: "/mapa_ciudad.png?height=200&width=300", 
       demoUrl: "/Project1",
       repoUrl: "https://github.com",
       projectNumber: 1,

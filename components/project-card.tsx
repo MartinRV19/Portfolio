@@ -49,13 +49,13 @@ export default function ProjectCard({
         <Button variant="outline" size="sm" asChild>
           <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" />
-            Code
+            Repo
           </Link>
         </Button>
         <Button size="sm" asChild>
           <Link href={`/Project${projectNumber}`}>
             <ExternalLink className="mr-2 h-4 w-4" />
-            Demo
+            Notebook
           </Link>
         </Button>
       </CardFooter>
