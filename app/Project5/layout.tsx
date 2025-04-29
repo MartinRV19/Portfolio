@@ -14,26 +14,26 @@ export default function ProjectLayout({
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="font-bold text-xl">
-            <Link href="/">John Doe</Link>
+            <Link href="/">Martin Valiente</Link>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link
               href="/#about"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              About
+              Sobre mí
             </Link>
             <Link
               href="/#projects"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Projects
+              Proyectos
             </Link>
           </nav>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" asChild>
               <Link
-                href="https://github.com"
+                href="https://github.com/MartinRV19"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -43,7 +43,7 @@ export default function ProjectLayout({
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <Link
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/martinrodriguezvaliente" 
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -52,7 +52,7 @@ export default function ProjectLayout({
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="mailto:contact@example.com">
+              <Link href="mailto:rodriguezvalientemartin@gmail.com"> 
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Link>

@@ -85,30 +85,30 @@ export default function Portfolio() {
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between ">
-          <div className="font-bold text-xl">Marto</div>
+          <div className="font-bold text-xl">Martin Valiente</div>
           <nav className="hidden md:flex gap-6">
             <Link href="#about" className="text-muted-foreground hover:text-foreground transition-colors">
-              About
+              Sobre mí
             </Link>
             <Link href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">
-              Projects
+              Proyectos
             </Link>
           </nav>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/MartinRV19" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://linkedin.com/in/martinrodriguezvaliente" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="mailto:contact@example.com">
+              <Link href="mailto:rodriguezvalientemartin@gmail.com">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Link>
@@ -145,7 +145,7 @@ export default function Portfolio() {
         <section id="about" className="py-12 md:py-20 scroll-mt-20">
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
             <span className="w-8 h-1 bg-primary rounded-full"></span>
-            About Me
+            Sobre mí
           </h2>
           <div className="space-y-4 max-w-3xl">
             <p className="text-lg">
@@ -167,7 +167,7 @@ export default function Portfolio() {
         <section id="projects" className="py-12 md:py-20 scroll-mt-20">
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
             <span className="w-8 h-1 bg-primary rounded-full"></span>
-            Featured Projects
+            Projectos
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
