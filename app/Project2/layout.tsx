@@ -9,7 +9,7 @@ export default function ProjectLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       {/* Header */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
@@ -62,23 +62,6 @@ export default function ProjectLayout({
       </header>
 
       {children}
-
-      {/* Footer */}
-      <footer className="border-t py-6 md:py-8">
-        <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} John Doe. All rights reserved.
-          </div>
-          <div className="flex gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/#about">About</Link>
-            </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <Link href="/#projects">Projects</Link>
-            </Button>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

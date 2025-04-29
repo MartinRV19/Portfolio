@@ -8,7 +8,7 @@ const HtmlRenderer = dynamic(
   { ssr: false }
 );
 
-export default function Project1Page() { 
+export default function Project5Page() { 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

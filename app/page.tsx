@@ -148,6 +148,24 @@ export default function Portfolio() {
               repoUrl="https://github.com"
               projectNumber={6}
             />
+            <ProjectCard
+              title="Weather Analysis"
+              description="A dashboard for analyzing weather data and visualizing trends over time."
+              tags={["React", "Chart.js", "Weather API"]}
+              imageUrl="/placeholder.svg?height=200&width=300"
+              demoUrl="/Project7"
+              repoUrl="https://github.com"
+              projectNumber={7}
+            />
+            <ProjectCard
+              title="Real Estate Insights"
+              description="Visualization and analysis of real estate data for better decision making."
+              tags={["Next.js", "D3.js", "Data Science"]}
+              imageUrl="/placeholder.svg?height=200&width=300"
+              demoUrl="/Project8"
+              repoUrl="https://github.com"
+              projectNumber={8}
+            />
           </div>
         </section>
       </main>
