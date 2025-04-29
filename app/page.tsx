@@ -122,23 +122,22 @@ export default function Portfolio() {
         <section className="py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1 space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Hi, I'm <span className="text-primary">John Doe</span>
+              Hola, Soy <span className="text-primary">Martin</span> 👋
             </h1>
-            <h2 className="text-2xl md:text-3xl text-muted-foreground">Full Stack Developer</h2>
             <p className="text-lg text-muted-foreground max-w-md">
-              I build exceptional and accessible digital experiences for the web.
+              Acá podes encontrar algunos de los proyectos que hice. datos. 
             </p>
             <div className="flex gap-4 pt-4">
               <Button variant="outline" asChild>
-                <Link href="/resume.pdf" target="_blank">
-                  View Resume
+                <Link href="/CV_Martin_Rodriguez_Valiente.pdf" target="_blank">   
+                  CV
                 </Link>
               </Button>
             </div>
           </div>
           <div className="w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-primary/20">
-            <img src="/placeholder.svg?height=300&width=300" alt="John Doe" className="w-full h-full object-cover" />
-          </div>
+            <img src="/foto_portada.png?height=300&width=300" alt="Martin Valiente" className="w-full h-full object-cover" />
+          </div>  
         </section>
 
         {/* About Section */}
