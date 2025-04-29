@@ -95,6 +95,7 @@ export default function Portfolio() {
             </Link>
           </nav>
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Button variant="ghost" size="icon" asChild>
               <Link href="https://github.com/MartinRV19" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />

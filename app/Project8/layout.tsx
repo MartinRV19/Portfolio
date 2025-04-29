@@ -2,6 +2,7 @@ import type React from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/theme-toggle";  // <-- Agregar este import arriba
 
 export default function ProjectLayout({
   children,
@@ -31,6 +32,7 @@ export default function ProjectLayout({
             </Link>
           </nav>
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Button variant="ghost" size="icon" asChild>
               <Link
                 href="https://github.com/MartinRV19"
@@ -65,3 +67,7 @@ export default function ProjectLayout({
     </div>
   );
 }
+
+
+
+
