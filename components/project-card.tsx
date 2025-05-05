@@ -34,7 +34,7 @@ export default function ProjectCard({
       </div>
       <CardHeader>
         <CardTitle>
-          <Link href={`/Project${projectNumber}`} className="hover:underline">
+          <Link href={demoUrl} className="hover:underline">
             {title}
           </Link>
         </CardTitle>
@@ -53,7 +53,7 @@ export default function ProjectCard({
           </Link>
         </Button>
         <Button size="sm" asChild>
-          <Link href={`/Project${projectNumber}`}>
+          <Link href={demoUrl}>
             <ExternalLink className="mr-2 h-4 w-4" />
             Notebook
           </Link>
