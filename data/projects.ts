@@ -1,16 +1,15 @@
 export const projectsData = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    slug: "ecommerce-platform",
-    description: "A full-featured online store with payment processing, user authentication, and inventory management.",
+    title: "Merval Acciones",
+    slug: "merval_acciones",
+    description: "Proyecto de análisis de acciones de Merval.",
     longDescription:
-      "This e-commerce platform provides a complete solution for online stores. It includes features like product catalog management, shopping cart functionality, secure payment processing with Stripe, user authentication, and inventory tracking. The admin dashboard allows store owners to manage products, view orders, and analyze sales data.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    imageUrl: "/placeholder.svg?height=200&width=300",
-    demoUrl: "https://example.com",
-    repoUrl: "https://github.com",
-    notebookPath: "/notebooks/ecommerce-analysis.ipynb",
+      "Proyecto de análisis de acciones de Merval.",
+    imageUrl: "/mapa_ciudad.png?height=200&width=300",
+    demoUrl: "/merval_acciones",
+    repoUrl: "https://github.com/MartinRV19/merval_acciones",
+    notebookPath: "venta_departamentos_properati.html",
   },
   {
     id: 2,
