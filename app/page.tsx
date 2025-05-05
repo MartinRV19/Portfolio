@@ -69,12 +69,12 @@ export default function Portfolio() {
       projectNumber: 2,
     },
     {
-      title: "E-commerce Platform",
-      description: "A full-featured online store with payment processing, user authentication, and inventory management.",
+      title: "Merval Acciones",
+      description: "Proyecto de análisis de acciones de Merval.",
       date: "Enero 2024",
       imageUrl: "/mapa_ciudad.png?height=200&width=300", 
-      demoUrl: "/Project1",
-      repoUrl: "https://github.com",
+      demoUrl: "/merval_acciones",
+      repoUrl: "https://github.com/MartinRV19/merval_acciones",
       projectNumber: 1,
     },
   ];
