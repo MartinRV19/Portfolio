@@ -32,7 +32,7 @@ export default function ProjectCard({
           className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
         />
       </div>
-      <CardHeader className="flex-none">
+      <CardHeader className="flex-none min-h-[120px]">
         <CardTitle className="line-clamp-1">
           <Link href={demoUrl} className="hover:underline">
             {title}
