@@ -32,20 +32,20 @@ export default function ProjectCard({
           className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
         />
       </div>
-      <CardHeader>
-        <CardTitle>
+      <CardHeader className="flex-none">
+        <CardTitle className="line-clamp-1">
           <Link href={demoUrl} className="hover:underline">
             {title}
           </Link>
         </CardTitle>
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className="line-clamp-2">{description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex-grow">
+      <CardContent className="flex-none">
         <div className="text-sm text-muted-foreground font-semibold">
           {date}
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
+      <CardFooter className="flex-none flex justify-between mt-auto">
         <Button variant="outline" size="sm" asChild>
           <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
             <Github className="mr-2 h-4 w-4" />

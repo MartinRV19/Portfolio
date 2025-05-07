@@ -16,7 +16,7 @@ export default function Portfolio() {
     },
     {
       title: "Salarios NBA",
-      description: "Análisis estadístico de salarios de jugadores de la NBA.",
+      description: "Análisis estadístico de salarios de jugadores de la NBA y su relación con su performance pasada. En python y en Excel/Stata.",
       date: "Agosto 2023",
       imageUrl: "/portada_nba_analisis_salarios.png?height=200&width=300",
       demoUrl: "/nba_analisis_salarios",
@@ -51,8 +51,8 @@ export default function Portfolio() {
       projectNumber: 8,
     },
     {
-      title: "Discurso asunción presidencial",
-      description: "Wordcloud de los discursos de asunción presidencial en Argentina desde 1983 a 2019",
+      title: "Discursos de asunción presidencial",
+      description: "Wordcloud de los discursos de asunción presidencial en Argentina desde 1983 a 2019.",
       date: "Marzo 2022",
       imageUrl: "/portada_wordcloud_asuncion_presidencial.png?height=200&width=300", 
       demoUrl: "/wordcloud_asuncion_presidencial",
