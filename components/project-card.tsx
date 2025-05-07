@@ -40,10 +40,10 @@ export default function ProjectCard({
         </CardTitle>
         <CardDescription className="line-clamp-3">{description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex-none">
-        {/* Espacio vacío para mantener el layout */}
+      <CardContent className="flex-none pb-8">
+        {/* Espacio para mantener la altura original */}
       </CardContent>
-      <div className="absolute bottom-16 left-6">
+      <div className="absolute bottom-32 left-6">
         <div className="text-sm text-muted-foreground font-semibold">
           {date}
         </div>
