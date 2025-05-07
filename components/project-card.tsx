@@ -38,7 +38,7 @@ export default function ProjectCard({
             {title}
           </Link>
         </CardTitle>
-        <CardDescription className="line-clamp-2">{description}</CardDescription>
+        <CardDescription className="line-clamp-3">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-none">
         <div className="text-sm text-muted-foreground font-semibold">
