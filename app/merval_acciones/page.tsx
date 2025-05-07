@@ -16,7 +16,7 @@ export default function Project1Page() {
     return (
         <div className="h-full overflow-hidden">
             <HtmlRenderer
-                filePath="/notebooks/wordcloud_Spanish.html"
+                filePath="/notebooks/acciones_Merval.html"  
                 className="w-full"
                 height="100vh"
             />
