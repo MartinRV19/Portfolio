@@ -60,15 +60,6 @@ export default function Portfolio() {
       projectNumber: 3,
     },
     {
-      title: "Discursos de asunción presidencial",
-      description: "Wordcloud de discursos de asunción presidencial.",
-      date: "Marzo 2022",
-      imageUrl: "/wordcloud.png?height=200&width=300",
-      demoUrl: "/wordcloud_asuncion_presidencial",
-      repoUrl: "https://github.com/MartinRV19/wordcloud_asuncion_presidencial",
-      projectNumber: 2,
-    },
-    {
       title: "Merval Acciones",
       description: "Proyecto de análisis de acciones de Merval.",
       date: "Marzo 2023",
@@ -76,6 +67,15 @@ export default function Portfolio() {
       demoUrl: "/merval_acciones",
       repoUrl: "https://github.com/MartinRV19/merval_acciones",
       projectNumber: 1,
+    },
+    {
+      title: "Discursos de asunción presidencial",
+      description: "Wordcloud de discursos de asunción presidencial.",
+      date: "Marzo 2022",
+      imageUrl: "/wordcloud.png?height=200&width=300",
+      demoUrl: "/wordcloud_asuncion_presidencial",
+      repoUrl: "https://github.com/MartinRV19/wordcloud_asuncion_presidencial",
+      projectNumber: 2,
     },
   ];
 
