@@ -24,7 +24,7 @@ export default function ProjectCard({
   projectNumber,
 }: ProjectCardProps) {
   return (
-    <Card className="overflow-hidden flex flex-col h-full border bg-card text-card-foreground">
+    <Card className="overflow-hidden flex flex-col h-full border bg-card text-card-foreground relative">
       <div className="aspect-video w-full overflow-hidden">
         <img
           src={imageUrl || "/placeholder.svg"}
@@ -32,7 +32,7 @@ export default function ProjectCard({
           className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
         />
       </div>
-      <CardHeader className="flex-none min-h-[120px]">
+      <CardHeader className="flex-none">
         <CardTitle className="line-clamp-1">
           <Link href={demoUrl} className="hover:underline">
             {title}
@@ -41,10 +41,13 @@ export default function ProjectCard({
         <CardDescription className="line-clamp-3">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-none">
+        {/* Espacio vacío para mantener el layout */}
+      </CardContent>
+      <div className="absolute bottom-16 left-6">
         <div className="text-sm text-muted-foreground font-semibold">
           {date}
         </div>
-      </CardContent>
+      </div>
       <CardFooter className="flex-none flex justify-between mt-auto">
         <Button variant="outline" size="sm" asChild>
           <Link href={repoUrl} target="_blank" rel="noopener noreferrer">
