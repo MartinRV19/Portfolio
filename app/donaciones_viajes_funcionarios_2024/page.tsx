@@ -16,7 +16,7 @@ export default function Project6Page() {
     return (
         <div className="h-full overflow-hidden">
             <HtmlRenderer
-                filePath="/notebooks/wordcloud_Spanish.html"
+                filePath="/notebooks/donaciones_funcionarios_2024.html" 
                 className="w-full"
                 height="100vh"
             />

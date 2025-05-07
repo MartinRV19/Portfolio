@@ -8,7 +8,7 @@ const HtmlRenderer = dynamic(
   { ssr: false }
 );
 
-export default function Project5Page() { 
+export default function Project4Page() { 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -16,7 +16,7 @@ export default function Project5Page() {
     return (
         <div className="h-full overflow-hidden">
             <HtmlRenderer
-                filePath="/notebooks/wordcloud_Spanish.html"
+                filePath="/notebooks/evolucion_dolar.html" 
                 className="w-full"
                 height="100vh"
             />

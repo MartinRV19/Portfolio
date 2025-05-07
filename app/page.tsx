@@ -6,62 +6,26 @@ export default function Portfolio() {
   // Lista de proyectos con fechas
   const projects = [
     {
-      title: "Real Estate Insights",
-      description: "Visualization and analysis of real estate data for better decision making.",
-      date: "Agosto 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
-      demoUrl: "/Project8",
-      repoUrl: "https://github.com",
-      projectNumber: 8,
-    },
-    {
-      title: "Weather Analysis",
-      description: "A dashboard for analyzing weather data and visualizing trends over time.",
-      date: "Julio 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
-      demoUrl: "/Project7",
-      repoUrl: "https://github.com",
-      projectNumber: 7,
-    },
-    {
-      title: "Fitness Tracker",
-      description: "A mobile-responsive web app for tracking workouts, nutrition, and fitness goals with data visualization.",
-      date: "Junio 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
-      demoUrl: "/Project6",
-      repoUrl: "https://github.com",
+      title: "Donaciones Funcionarios Públicos", 
+      description: "Dashboards con datos de donaciones y viajes de funcionarios públicos.",
+      date: "Noviembre 2024",
+      imageUrl: "/portada_donaciones_viajes_funcionarios_2024.png?height=200&width=300",
+      demoUrl: "/donaciones_viajes_funcionarios_2024", 
+      repoUrl: "https://github.com/MartinRV19/donaciones_viajes_funcionarios_2024",
       projectNumber: 6,
     },
     {
-      title: "Recipe Finder",
-      description: "An application that helps users discover recipes based on available ingredients and dietary preferences.",
-      date: "Mayo 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
-      demoUrl: "/Project5",
-      repoUrl: "https://github.com",
+      title: "Salarios NBA",
+      description: "Análisis estadístico de salarios de jugadores de la NBA.",
+      date: "Agosto 2023",
+      imageUrl: "/portada_nba_analisis_salarios.png?height=200&width=300",
+      demoUrl: "/nba_analisis_salarios",
+      repoUrl: "https://github.com/MartinRV19/nba_analisis_salarios",
       projectNumber: 5,
     },
     {
-      title: "Portfolio Website",
-      description: "A responsive portfolio website built with modern web technologies to showcase projects and skills.",
-      date: "Abril 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
-      demoUrl: "/Project4",
-      repoUrl: "https://github.com",
-      projectNumber: 4,
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A weather application that provides forecasts, historical data, and location-based weather alerts.",
-      date: "Marzo 2024",
-      imageUrl: "/placeholder.svg?height=200&width=300",
-      demoUrl: "/Project3",
-      repoUrl: "https://github.com",
-      projectNumber: 3,
-    },
-    {
-      title: "Merval Acciones",
-      description: "Proyecto de análisis de acciones de Merval.",
+      title: "Acciones del Merval",
+      description: "Evolución del rendimiento de las acciones que componen el Panel Líder del S&P Merval (2018-2022).",
       date: "Marzo 2023",
       imageUrl: "/portada_merval_acciones.png?height=200&width=300",  
       demoUrl: "/merval_acciones",
@@ -69,14 +33,50 @@ export default function Portfolio() {
       projectNumber: 1,
     },
     {
+      title: "Brecha cambiaria e Inflación",
+      description: "Análisis de la evolución del Dólar Minorista, Dólar Blue e Inflación.",
+      date: "Febrero 2023",
+      imageUrl: "/portada_evolucion_dolar.png?height=200&width=300",
+      demoUrl: "/evolucion_dolar",
+      repoUrl: "https://github.com/MartinRV19/evolucion_dolar",
+      projectNumber: 4,
+    },
+    {
+      title: "Satisfacción de pasajeros de aerolínea",
+      description: "Modelo de predicción de satisfacción de pasajeros de aerolínea.",
+      date: "Mayo 2022",
+      imageUrl: "/portada_airline_passenger_satisfaction.png?height=200&width=300",
+      demoUrl: "/airline_passenger_satisfaction",
+      repoUrl: "https://github.com/MartinRV19/airline_passenger_satisfaction",
+      projectNumber: 8,
+    },
+    {
       title: "Discursos de asunción presidencial",
-      description: "Wordcloud de discursos de asunción presidencial.",
+      description: "Wordcloud de los discursos de asunción presidencial en Argentina desde 1983 a 2019",
       date: "Marzo 2022",
-      imageUrl: "/wordcloud.png?height=200&width=300",
+      imageUrl: "/portada_wordcloud_asuncion_presidencial.png?height=200&width=300", 
       demoUrl: "/wordcloud_asuncion_presidencial",
       repoUrl: "https://github.com/MartinRV19/wordcloud_asuncion_presidencial",
       projectNumber: 2,
     },
+    {
+      title: "Departamentos en venta en CABA", 
+      description: "Análisis de departamentos en venta en Ciudad de Buenos Aires (Marzo-2022).",
+      date: "Marzo 2022",
+      imageUrl: "/portada_departamentos_caba_venta_2022.png?height=200&width=300",
+      demoUrl: "/departamentos_caba_venta_2022",
+      repoUrl: "https://github.com/MartinRV19/departamentos_caba_venta_2022",
+      projectNumber: 3,
+    },
+    {
+      title: "Predicción de inflación en Argentina",
+      description: "Con datos de 2004 a 2020 y un modelo univariado de proceso autorregresivo y media móvil se predice los valores de 2021 y 2022.",
+      date: "Febrero 2022",
+      imageUrl: "/portada_arg_inflation_prediction_2022.png?height=200&width=300",
+      demoUrl: "/arg_inflation_prediction_2022",
+      repoUrl: "https://github.com/MartinRV19/arg_inflation_prediction_2022",
+      projectNumber: 7,
+    }
   ];
 
   return ( 
@@ -124,7 +124,7 @@ export default function Portfolio() {
               Hola, Soy <span className="text-primary">Martin</span> 👋
             </h1>
             <p className="text-lg text-muted-foreground max-w-md">
-              Acá podes encontrar algunos de los proyectos que hice. datos. 
+              Acá podés encontrar algunos de los proyectos que hice. 
             </p>
             <div className="flex gap-4 pt-4">
               <Button variant="outline" asChild>
@@ -147,16 +147,17 @@ export default function Portfolio() {
           </h2>
           <div className="space-y-4 max-w-3xl">
             <p className="text-lg">
-              I'm a passionate full-stack developer with 5+ years of experience building web applications. I specialize
-              in React, Next.js, and Node.js, creating responsive and user-friendly interfaces.
+              Soy de Hurlingham, Buenos Aires. Soy licenciado en Economía y me gusta descubrir que
+              cuentan los datos. A veces podemos escuchar conclusiones sesgadas, por lo que me gusta buscar
+              y entender las historias detrás de los números. Al final del día, dato mata relato. 
             </p>
             <p className="text-lg">
-              My journey in web development started when I built my first website in college. Since then, I've worked
-              with startups and established companies to deliver high-quality software solutions.
+              Me gusta la economía y la estadística y acá hay algunos proyectos con un mix de ambas. También tienen 
+              distintas formas de obtener datos, desde la tradicional descarga de un csv, a acceder a una API o a 
+              tener que hacer web scraping porque no te queda otra.
             </p>
             <p className="text-lg">
-              When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new
-              technologies.
+              Todo feedback es bienvenido. Me podes contactar al siguiente <a href="mailto:rodriguezvalientemartin@gmail.com" className="text-primary hover:underline">mail</a>
             </p>
           </div>
         </section>
