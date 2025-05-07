@@ -43,7 +43,7 @@ export default function ProjectCard({
       <CardContent className="flex-none pb-8">
         {/* Espacio para mantener la altura original */}
       </CardContent>
-      <div className="absolute bottom-32 left-6">
+      <div className="absolute bottom-24 left-6">
         <div className="text-sm text-muted-foreground font-semibold">
           {date}
         </div>
