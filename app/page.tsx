@@ -42,7 +42,7 @@ export default function Portfolio() {
       projectNumber: 4,
     },
     {
-      title: "Satisfacción de pasajeros de aerolínea",
+      title: "Satisfacción de pasajeros",
       description: "Modelo de predicción de satisfacción de pasajeros de aerolínea.",
       date: "Mayo 2022",
       imageUrl: "/portada_airline_passenger_satisfaction.png?height=200&width=300",
@@ -51,7 +51,7 @@ export default function Portfolio() {
       projectNumber: 8,
     },
     {
-      title: "Discursos de asunción presidencial",
+      title: "Discurso asunción presidencial",
       description: "Wordcloud de los discursos de asunción presidencial en Argentina desde 1983 a 2019",
       date: "Marzo 2022",
       imageUrl: "/portada_wordcloud_asuncion_presidencial.png?height=200&width=300", 
@@ -69,8 +69,8 @@ export default function Portfolio() {
       projectNumber: 3,
     },
     {
-      title: "Predicción de inflación en Argentina",
-      description: "Con datos de 2004 a 2020 y un modelo univariado de proceso autorregresivo y media móvil se predice los valores de 2021 y 2022.",
+      title: "Predicción de inflación",
+      description: "Inflación en Argentina. Con datos de 2004 a 2020 y un modelo univariado de proceso autorregresivo y media móvil se predice los valores de 2021 y 2022.",
       date: "Febrero 2022",
       imageUrl: "/portada_arg_inflation_prediction_2022.png?height=200&width=300",
       demoUrl: "/arg_inflation_prediction_2022",
