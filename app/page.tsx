@@ -121,10 +121,10 @@ export default function Portfolio() {
         <section className="py-12 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="flex-1 space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Hola, Soy <span className="text-primary">Martin</span> 👋
+              Hola, soy <span className="text-primary">Martin</span> 👋
             </h1>
             <p className="text-lg text-muted-foreground max-w-md">
-              Acá podés encontrar algunos de los proyectos que hice. 
+              Espero que estés teniendo un gran día. Bienvenido a mi portfolio 👍 
             </p>
             <div className="flex gap-4 pt-4">
               <Button variant="outline" asChild>
@@ -147,17 +147,18 @@ export default function Portfolio() {
           </h2>
           <div className="space-y-4 max-w-3xl">
             <p className="text-lg">
-              Soy de Hurlingham, Buenos Aires. Soy licenciado en Economía y me gusta descubrir que
-              cuentan los datos. A veces podemos escuchar conclusiones sesgadas, por lo que me gusta buscar
-              y entender las historias detrás de los números. Al final del día, dato mata relato. 
+              Soy de Hurlingham, Buenos Aires. Soy licenciado en Economía y me interesa
+              descubrir qué cuentan los datos. Muchas veces escuchamos conclusiones sesgadas,
+              por eso busco entender las historias reales detrás de los números.
+              Al final del día, dato mata relato. 
             </p>
             <p className="text-lg">
-              Me gusta la economía y la estadística y acá hay algunos proyectos con un mix de ambas. También tienen 
-              distintas formas de obtener datos, desde la tradicional descarga de un csv, a acceder a una API o a 
-              tener que hacer web scraping porque no te queda otra.
+              Me gusta la economía y la estadística, y acá vas a encontrar proyectos que combinan ambas.
+              También tienen distintas formas de obtener datos: desde la clásica descarga de un csv,
+              hasta el uso de APIs o web scraping cuando no queda otra.
             </p>
             <p className="text-lg">
-              Todo feedback es bienvenido. Me podes contactar al siguiente <a href="mailto:rodriguezvalientemartin@gmail.com" className="text-primary hover:underline">mail</a>
+              Todo feedback es bienvenido. Podés contactarme al siguiente <a href="mailto:rodriguezvalientemartin@gmail.com" className="text-primary hover:underline">mail</a>
             </p>
           </div>
         </section>
