@@ -51,7 +51,7 @@ export default function Portfolio() {
       projectNumber: 8,
     },
     {
-      title: "Discursos de asunción presidencial",
+      title: "Discursos asunción presidencial",
       description: "Wordcloud de los discursos de asunción presidencial en Argentina desde 1983 a 2019.",
       date: "Marzo 2022",
       imageUrl: "/portada_wordcloud_asuncion_presidencial.png?height=200&width=300", 
@@ -158,7 +158,7 @@ export default function Portfolio() {
               hasta el uso de APIs o web scraping cuando no queda otra.
             </p>
             <p className="text-lg">
-              Todo feedback es bienvenido. Podés contactarme al siguiente <a href="mailto:rodriguezvalientemartin@gmail.com" className="text-primary hover:underline">mail</a>
+              Todo feedback es bienvenido. Podés contactarme al siguiente <a href="mailto:rodriguezvalientemartin@gmail.com" className="text-primary hover:underline">mail.</a>
             </p>
           </div>
         </section>
