@@ -76,6 +76,15 @@ export default function Portfolio() {
       demoUrl: "/arg_inflation_prediction_2022",
       repoUrl: "https://github.com/MartinRV19/arg_inflation_prediction_2022",
       projectNumber: 7,
+    },
+    {
+      title: "NBA Analytics",
+      description: "Proyecto final Curso Data Analytics: Dashboard interactivo de análisis de datos de la NBA creado en Power BI.",
+      date: "Octubre 2021",
+      imageUrl: "/portada_nba_analytics.png?height=200&width=300",
+      demoUrl: "https://app.powerbi.com/view?r=eyJrIjoiOTRmMDY3MTktMGI4NC00MDQwLWIzMWUtMWI2ZDhmNDZhMTNkIiwidCI6IjRjODE4Zjc5LWFiODQtNDU1Mi05YjdjLTJmZTcxNWIwZDBkNSIsImMiOjR9", // Enlace al reporte en Power BI
+      repoUrl: "https://github.com/MartinRV19/nba_analytics",
+      projectNumber: 9
     }
   ];
 
@@ -180,7 +189,7 @@ export default function Portfolio() {
                 demoUrl={project.demoUrl}
                 repoUrl={project.repoUrl}
                 projectNumber={project.projectNumber}
-              />
+                              />
             ))}
           </div>
         </section>
