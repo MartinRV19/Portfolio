@@ -6,8 +6,8 @@ export default function Portfolio() {
   // Lista de proyectos con fechas
   const projects = [
     {
-      title: "Precios de departamentos en CABA", 
-      description: "Valor del m2 por barrio y modelo de predicción de precios.",
+      title: "Precios de departamentos", 
+      description: "Valor del m2 por barrio en CABA y modelo de predicción de precios.",
       date: "Mayo 2025",
       imageUrl: "/portada_departamentos_caba_2025.png?height=200&width=300",  
       demoUrl: "/departamentos_caba_2025", 
