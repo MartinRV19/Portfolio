@@ -5687,7 +5687,7 @@ dtype: float64</code></pre>
 <p>Los residuos presentan una tendencia, y no vemos una nube de puntos sin forma, como se desearía.</p>
 <p>Vamos a realizar una <strong>prueba de hipótesis</strong> para determinar si existe <strong>heterocedasticidad</strong> de forma analítica. Utilizaremos el <strong>Test de White</strong>. Donde las hipótesis son:</p>
 <p>(Homocedasticidad) <span class="math display">\[H_0:\ {\sigma^2}_{\varepsilon_i}={\sigma^2}_{\varepsilon_\ }\]</span></p>
-<p>(Heterocedasticidad) <span class="math display">\[H_1:\ {\sigma^2}_{\varepsilon_i}=C\cdot{{x_{ij}^2}^\ }_\\]</span></p>
+<p>(Heterocedasticidad) <span class="math display">\[H_1:\ {\sigma^2}_{\varepsilon_i}=C\cdot{{x_{ij}^2}^\ }\]</span></p>
 <p>Para realizar esta prueba, elevamos los residuos al cuadrado para poder realizar una regresión auxiliar con los <span class="math inline">\({\hat{\varepsilon}}_i^2\)</span> como variable respuesta, y como variables predictoras tomamos las variables explicativas que utilizamos en la regresión inicial, sus cuadrados, y los términos cruzados.</p>
 <p>El estadístico de prueba es el siguiente:</p>
 <p><span class="math display">\[n\cdot R^2\ =\ \chi_p^2\]</span></p>
@@ -5710,7 +5710,7 @@ dtype: float64</code></pre>
 <h3 class="anchored" data-anchor-id="transformación-logarítmica-modelo-log-log">Transformación logarítmica (modelo Log-Log)</h3>
 <p>El P-value de la prueba es menor a 0,05 por lo que se rechaza la <span class="math inline">\(H_0\)</span>.</p>
 <p>Ante la <strong>presencia de Heterocedasticidad</strong>, una posible <strong>solución</strong> es realizar una <strong>transformación logarítmica</strong> (modelo Log-Log). Por lo que nuestra nueva ecuación de regresión es:</p>
-<p><span class="math display">\[lny_i=\beta_0+\beta_1lnx_{i1}+\beta_{2^\ }lnx_{i2}+\beta_{3^\ }lnx_{i3}+\beta_{4^\ }lnx_{i4}+\varepsilon_i\ \\]</span></p>
+<p><span class="math display">\[ln(y_i)=\beta_0+\beta_1ln(x_{i1})+\beta_{2^\ }ln(x_{i2})+\beta_{3^\ }ln(x_{i3})+\beta_{4^\ }ln(x_{i4})+\varepsilon_i\]</span></p>
 <p>Realizamos la estimación de los parámetros y comparamos los valores esperados de la variable respuesta con sus residuos.</p>
 <div id="cell-78" class="cell" data-execution_count="343">
 <details open class="code-fold">
